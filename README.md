@@ -1,8 +1,7 @@
 # OpenVZ 7 / Virtuozzo 7 Goodies
-======
 
 
-### Initial Devuan 1.0RC2 template support.
+### Initial [Devuan](https://devuan.org/) 1.0RC2 template support.
 Based on a mix of the Debian 7 and 8 templates.
 
 1. Place the devuan directory in /vz/templates
