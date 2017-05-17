@@ -7,12 +7,18 @@ Based on a mix of the Debian 7 and 8 templates.
 
 1. Place the devuan directory in /vz/templates
 2. Add the following to: /vz/template/conf/vztt/url.map
-..* $DEVUAN_SERVER  http://auto.mirror.devuan.org
-3. Then run:
-..* vzpkg create cache devuan-1.0RC2-x86_64-minimal
-..* prlctl create MyDevuan --vmtype ct --ostemplate devuan-1.0RC2-x86_64-minimal
-..* prlctl start MyDevuan
-..* prlctl enter MyDevuan
+```
+
+$DEVUAN_SERVER  http://auto.mirror.devuan.org
+
+```
+4. Then run:
+```
+vzpkg create cache devuan-1.0RC2-x86_64-minimal
+prlctl create MyDevuan --vmtype ct --ostemplate devuan-1.0RC2-x86_64-minimal
+prlctl start MyDevuan
+prlctl enter MyDevuan
+```
 4. PROFIT!
 
 
