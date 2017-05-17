@@ -1,13 +1,22 @@
-# openvz7
-General OVZ7 (Virtuozzo 7/ OpenVZ 7) goodies
+# OpenVZ 7 / Virtuozzo 7 Goodies
+======
 
 
-Initial Devuan 1.0RC2 template support.
+### Initial Devuan 1.0RC2 template support.
 Based on a mix of the Debian 7 and 8 templates.
 
+1. Place the devuan directory in /vz/templates
+2. Add the following to: /vz/template/conf/vztt/url.map
+..* $DEVUAN_SERVER  http://auto.mirror.devuan.org
+3. Then run:
+..* vzpkg create cache devuan-1.0RC2-x86_64-minimal
+..* prlctl create MyDevuan --vmtype ct --ostemplate devuan-1.0RC2-x86_64-minimal
+..* prlctl start MyDevuan
+..* prlctl enter MyDevuan
+4. PROFIT!
 
 
-Add the following to: /vz/template/conf/vztt/url.map
+#### TODO:
+Sysvinit cleanup of 'sysvinit: restarting...init: timeout opening/writing control channel /run/initctl'
 
-
-$DEVUAN_SERVER  http://auto.mirror.devuan.org
+Network testing

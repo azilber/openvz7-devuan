@@ -44,7 +44,7 @@ iface lo inet loopback
 " > etc/network/interfaces.template
 
 # turn off and stop some services
-for i in bind9 quotarpc fetchmail rsync wide-dhcpv6-client rpcbind samba; do
+for i in bind9 quotarpc fetchmail rsync rpcbind samba; do
 	usr/sbin/update-rc.d -f $i remove > /dev/null 2>&1
 	etc/init.d/$i stop > /dev/null 2>&1
 done
@@ -195,20 +195,6 @@ chmod a+x etc/init.d/modules_dep.sh
 # Create empty /etc/inittab file
 touch etc/inittab
 
-# Turn back wide-dhcpv6-client init script and clean default conf file
-for i in etc/init.d/wide-dhcpv6-client; do
-	mv -f $i.dpkg-dist $i
-done
-# regenerate dhcp6cctlkey if exists
-cat > etc/default/wide-dhcpv6-client <<'EOFINITCONFFILE'
-# Defaults for dhcpv6 client initscript
-# Used by /etc/init.d/wide-dhcpv6-client
-
-# Interfaces on which the client should send DHCPv6 requests and listen to
-# answers. If empty, the client is deactivated.
-INTERFACES=""
-EOFINITCONFFILE
-
 rm -f etc/wide-dhcpv6/dhcp6cctlkey
 
 echo "#!/bin/sh
@@ -235,16 +221,5 @@ if [ -f $CFG_FILE ]; then
     sed -i -e "s/^THREADS=.*/THREADS=2/" -e "s/^START=.*/START=yes/" \
         $CFG_FILE
 fi
-
-# Disable startpar
-touch etc/init.d/.legacy-bootordering
-
-# Add ia32 arch support
-/usr/bin/dpkg --add-architecture i386 > /dev/null 2>&1
-
-# Disable sysvinit on dist-upgrade
-echo "Package: sysvinit
-Pin: release c=main
-Pin-Priority: -1" > etc/apt/preferences.d/parallels
 
 cd $MYDIR > /dev/null
