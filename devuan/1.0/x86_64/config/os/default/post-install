@@ -88,9 +88,9 @@ chmod a-x /etc/cron.monthly/* > /dev/null 2>&1
 if [ ! -f etc/apt/sources.list ]; then
 
 cat << EOF > etc/apt/sources.list
-deb http://ftp.debian.org/debian wheezy main contrib non-free
-deb http://security.debian.org wheezy/updates main contrib non-free
-
+# Devuan repositories
+deb http://auto.mirror.devuan.org/merged jessie main
+deb-src http://auto.mirror.devuan.org/merged jessie main
 EOF
 
 fi
