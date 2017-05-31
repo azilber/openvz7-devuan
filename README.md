@@ -13,6 +13,16 @@ Only the 'minimal' install has been tested.
 $DEVUAN_SERVER  http://auto.mirror.devuan.org
 
 ```
+
+3. Setup network:
+```
+prlctl set Devuan --ipadd 192.168.5.101/24
+prlctl set Devuan --nameserver 8.8.8.8
+
+```
+
+Make sure your server is configured as per: https://openvz.org/Using_NAT_for_container_with_private_IPs
+
 4. Then run:
 ```
 vzpkg create cache devuan-1.0-x86_64-minimal

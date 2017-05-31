@@ -135,20 +135,6 @@ done
 # Remove /dev/log
 rm -f dev/log >/dev/null 2>&1
 
-# ssh host keys hack
-
-echo "#!/bin/sh
-rm -f etc/ssh/ssh_host_*
-/usr/bin/ssh-keygen -t rsa -N '' -f /etc/ssh/ssh_host_rsa_key
-/usr/bin/ssh-keygen -t dsa -N '' -f /etc/ssh/ssh_host_dsa_key
-/usr/bin/ssh-keygen -t rsa1 -N '' -f /etc/ssh/ssh_host_key
-/usr/sbin/service ssh restart
-rm -f /etc/init.d/ssh_key_hack.sh
-rm -f /etc/rc2.d/S11sshhack
-" > etc/init.d/ssh_key_hack.sh
-chmod a+x etc/init.d/ssh_key_hack.sh
-ln -s /etc/init.d/ssh_key_hack.sh etc/rc2.d/S11sshhack
-
 # Fix modprobe.conf
 touch etc/modprobe.conf
 
@@ -194,26 +180,6 @@ chmod a+x etc/init.d/modules_dep.sh
 
 # Create empty /etc/inittab file
 touch etc/inittab
-
-rm -f etc/wide-dhcpv6/dhcp6cctlkey
-
-echo "#!/bin/sh
-DHCP6CCTLKEY=/etc/wide-dhcpv6/dhcp6cctlkey
-
-# The key mustn\'t be world readable
-umask 066
-
-echo \"Generating \${DHCP6CCTLKEY}...\" >&2
-dd if=/dev/random bs=32 count=1 2>/dev/null | \
-	uuencode -m \${DHCP6CCTLKEY} | \
-	head -n 2 | tail -n 1 > \${DHCP6CCTLKEY}
-
-umask 022
-rm -f /etc/init.d/dhcpv6_hack.sh
-rm -f /etc/rc2.d/S11dhcpv6hack
-"> etc/init.d/dhcpv6_hack.sh
-chmod a+x etc/init.d/dhcpv6_hack.sh
-ln -s /etc/init.d/dhcpv6_hack.sh etc/rc2.d/S11dhcpv6hack
 
 # saslauthd tuning
 CFG_FILE=etc/default/saslauthd
