@@ -1,10 +1,15 @@
+base-files
+bsdutils
+lsb-base
 curl
 devuan-baseconf
 devuan-keyring
-apt
-dpkg
 debconf
 debconf-i18n
+debconf-utils
+apt
+dpkg
+debconf debconf-i18n libdebconfclient0
 dialog
 gawk
 iputils-arping
@@ -28,6 +33,5 @@ openssh-client
 openssh-server
 software-properties-common
 syslog-ng
-unattended-upgrades
 vim-tiny
 wget

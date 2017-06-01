@@ -36,4 +36,8 @@ prlctl enter MyDevuan
 #### TODO:
 Sysvinit cleanup of 'sysvinit: restarting...init: timeout opening/writing control channel /run/initctl'
 
-Network testing
+#### Known Issues:
+
+1. devuan-baseconf not properly activating, so taken over by post-install
+2. mknod messages should be supressed
+3. initctl shouldn't try to run or shouldn't/should fail cleanly.

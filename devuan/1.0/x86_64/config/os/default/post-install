@@ -84,19 +84,26 @@ chmod a-x `find /etc/cron.daily/ -type f | grep -v "logrotate\|sysklogd"` > /dev
 chmod a-x /etc/cron.weekly/* > /dev/null 2>&1
 chmod a-x /etc/cron.monthly/* > /dev/null 2>&1
 
+#Sources
+
 # Fill /etc/apt/sources.list
 if [ ! -f etc/apt/sources.list ]; then
 
 cat << EOF > etc/apt/sources.list
 # Devuan repositories
-deb http://auto.mirror.devuan.org/merged jessie main
-deb-src http://auto.mirror.devuan.org/merged jessie main
+# Please see /etc/apt/sources.list.d for repositories
+#deb http://packages.devuan.org/merged jessie main
+#deb-src http://packages.devuan.org/merged jessie main
+EOF
+
+cat << EOF > etc/apt/sources.list.d/devuan.list
+deb http://auto.mirror.devuan.org/merged jessie          main
+deb http://auto.mirror.devuan.org/merged jessie-updates  main
+deb http://auto.mirror.devuan.org/merged jessie-security main
 EOF
 
 fi
 
-# Disable samba and bind9 ifup hook
-chmod 0644 etc/network/if-down.d/bind9 etc/network/if-up.d/bind9
 
 # Clean /run
 rm -rf /run/*
