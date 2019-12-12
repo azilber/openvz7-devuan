@@ -1,4 +1,4 @@
-penVZ 7 / Virtuozzo 7 Goodies
+# OpenVZ 7 / Virtuozzo 7 Goodies
 
 
 ### [Devuan](https://devuan.org/) 1.0 & 2.1 template support.
