@@ -1,0 +1,50 @@
+libprocps6 procps
+init-system-helpers
+insserv
+net-tools
+sysv-rc
+sysvinit
+sysvinit-core
+sysvinit-utils
+startpar sysvinit-utils
+tzdata
+libklibc klibc-utils
+libgdbm3 perl perl-modules-5.24
+libkmod2 kmod
+mawk
+udev
+libudev1 initramfs-tools
+libjson-c3
+initscripts
+libsmartcols1
+util-linux
+liblz4-1
+libfdisk1
+libapparmor1 libgcrypt20 dmsetup libdevmapper1.02.1 libgpg-error0 libcryptsetup4 libsystemd0 libcap2-bin acl
+libdebconfclient0 base-passwd
+adduser
+libfdisk1
+libcap-ng0
+libidn11
+libunistring0
+libseccomp2
+libip4tc0
+linux-base
+liblz4-1
+cpio
+diffutils
+libasprintf0v5 gettext-base
+grep
+gzip
+hostname
+iproute2 ifupdown
+initramfs-tools-core
+libmnl0
+makedev
+libmount1 libsmartcols1 mount
+ncurses-base
+netbase
+readline-common
+tar
+ucf
+resolvconf

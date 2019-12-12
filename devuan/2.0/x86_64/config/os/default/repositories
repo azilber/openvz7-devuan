@@ -1,0 +1,3 @@
+$DEVUAN_ASCII/merged ascii main
+$DEVUAN_ASCII/merged ascii-updates main contrib non-free
+$DEVUAN_ASCII/merged ascii-security main contrib non-free
