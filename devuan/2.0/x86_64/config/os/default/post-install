@@ -97,7 +97,7 @@ EOF
 cat << EOF > etc/apt/sources.list.d/devuan.list
 $DEVUAN_ASCII/merged ascii          main
 $DEVUAN_ASCII/merged ascii-updates  main
-# $DEVUAN_ASCII/merged ascii-security main
+$DEVUAN_ASCII/merged ascii-security main
 EOF
 
 fi

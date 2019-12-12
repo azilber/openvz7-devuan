@@ -39,8 +39,8 @@ prlctl create Devuan2 --vmtype ct --ostemplate devuan-2.0-x86_64
 
 5. Setup network (optional):
 ```
-prlctl set Devuan --ipadd 192.168.5.101/24
-prlctl set Devuan --nameserver 8.8.8.8
+prlctl set Devuan2 --ipadd 192.168.5.101/24
+prlctl set Devuan2 --nameserver 8.8.8.8
 ```
 
 Make sure your server is configured as per: https://openvz.org/Using_NAT_for_container_with_private_IPs
