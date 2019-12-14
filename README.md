@@ -56,6 +56,6 @@ prlctl enter Devuan
 
 
 #### Donations:
-[ZCoin] aBhvmEmDiwx5ppLgZ4CLN7UoiBYHrQAXVk
+[ZCoin](https://zcoin.io/) aBhvmEmDiwx5ppLgZ4CLN7UoiBYHrQAXVk
 ![xzc-donations](https://user-images.githubusercontent.com/691270/70847826-f2c94280-1ea3-11ea-9656-6603ff765f3e.png)
 
