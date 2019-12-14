@@ -55,9 +55,7 @@ prlctl enter Devuan
 7. PROFIT!
 
 
-#### Known Issues:
-
-1. devuan-baseconf not properly activating, so taken over by post-install
-2. mknod messages should be supressed
-3. initctl shouldn't try to run or shouldn't/should fail cleanly.
+#### Donations:
+[ZCoin] aBhvmEmDiwx5ppLgZ4CLN7UoiBYHrQAXVk
+![xzc-donations](https://user-images.githubusercontent.com/691270/70847826-f2c94280-1ea3-11ea-9656-6603ff765f3e.png)
 
