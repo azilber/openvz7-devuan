@@ -1,3 +1,3 @@
-$DEVUAN_SERVER/merged jessie main
-$DEVUAN_SERVER/merged jessie-updates main contrib non-free
-$DEVUAN_SERVER/merged jessie-security main contrib non-free
+$DEVUAN_JESSIE/merged jessie main
+$DEVUAN_JESSIE/merged jessie-updates main contrib non-free
+$DEVUAN_JESSIE/merged jessie-security main contrib non-free

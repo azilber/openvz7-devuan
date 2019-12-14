@@ -1,5 +1,4 @@
 adduser
-alsa-utils
 apt
 apt-utils
 base-files
@@ -7,8 +6,6 @@ base-passwd
 bash
 bsdmainutils
 bsdutils
-btrfs-progs
-btrfs-tools
 busybox-static
 bzip2
 ca-certificates
@@ -26,8 +23,6 @@ debianutils
 devuan-baseconf
 devuan-keyring
 diffutils
-dmidecode
-dmsetup
 dpkg
 e2fslibs
 e2fsprogs
@@ -36,7 +31,6 @@ fake-hwclock
 fbterm
 file
 findutils
-firmware-linux-free
 fontconfig-config
 fonts-dejavu-core
 gcc-6-base
@@ -48,10 +42,6 @@ gnupg
 gnupg-agent
 gpgv
 grep
-grub-common
-grub-pc
-grub-pc-bin
-grub2-common
 gzip
 hostname
 ifupdown
@@ -66,14 +56,11 @@ irqbalance
 isc-dhcp-client
 isc-dhcp-common
 klibc-utils
-kmod
 krb5-locales
 less
 libacl1
 libapt-inst2.0
 libapt-pkg5.0
-libasound2
-libasound2-data
 libassuan0
 libattr1
 libaudit-common
@@ -221,6 +208,7 @@ logrotate
 lsb-base
 lynx
 lynx-common
+man-db
 mawk
 mime-support
 mlocate
@@ -248,6 +236,7 @@ pinentry-curses
 procps
 readline-common
 rename
+resolvconf
 rsync
 rsyslog
 screen
@@ -276,8 +265,6 @@ vim-runtime
 vim-tiny
 wget
 whiptail
-wireless-tools
-wpasupplicant
 xauth
 xdg-user-dirs
 xml-core

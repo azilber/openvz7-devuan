@@ -5,7 +5,7 @@
 Based on a mix of the Debian 7-10 templates and Devuan vbox.
 
 Only the 'minimal' install has been tested for Devuan 1.0.
-Devuan Ascii (2.0) only has the regular install (which is basically minimal).
+Devuan Ascii (2.0) has the regular (default) install and minimal.
 
 Devuan 1.0 should be considered deprecated.
 
@@ -24,17 +24,18 @@ $DEVUAN_ASCII  http://deb.devuan.org
 ```
 vzpkg list -O --with-summary |grep -i devuan
 
-devuan-2.0-x86_64                  :Devuan Ascii 2.1 (for AMD64/Intel EM64T) Virtuozzo Template
 devuan-1.0-x86_64                  :Devuan 1.0 (for AMD64/Intel EM64T) Virtuozzo Template
 devuan-1.0-x86_64-minimal          :Devuan 1.0 minimal (for AMD64/Intel EM64T) Virtuozzo Template
+devuan-2.1-x86_64                  :Devuan Ascii 2.1 (for AMD64/Intel EM64T) Virtuozzo Template
+devuan-2.1-x86_64-minimal          :Devuan Ascii 2.1 minimal (for AMD64/Intel EM64T) Virtuozzo Template
 ```
 
 4. Setup Cache and Container:
 ```
 vzpkg create cache devuan-1.0-x86_64-minimal
-vzpkg create cache devuan-2.0-x86_64
+vzpkg create cache devuan-2.1-x86_64
 prlctl create Devuan --vmtype ct --ostemplate devuan-1.0-x86_64-minimal
-prlctl create Devuan2 --vmtype ct --ostemplate devuan-2.0-x86_64
+prlctl create Devuan2 --vmtype ct --ostemplate devuan-2.1-x86_64
 ```
 
 5. Setup network (optional):

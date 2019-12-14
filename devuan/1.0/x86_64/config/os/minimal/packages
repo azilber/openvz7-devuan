@@ -12,6 +12,7 @@ dpkg
 debconf debconf-i18n libdebconfclient0
 dialog
 gawk
+gpgv
 iputils-arping
 iputils-ping
 iputils-tracepath
